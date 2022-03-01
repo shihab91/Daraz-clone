@@ -27,6 +27,8 @@ export const Input = styled.input`
   width: 400px;
   height: 100%;
   border-radius: 4px;
+  padding: 0 10px 0 10px;
+  font-size: 16px;
 `;
 export const SearchButton = styled.button`
   background: var(--color-orange);

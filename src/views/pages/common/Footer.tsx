@@ -1,5 +1,6 @@
 import React from "react";
+import { Container } from "styles/GlobalStyles";
 
 export default function Footer() {
-  return <div>Footer</div>;
+  return <Container>Footer</Container>;
 }

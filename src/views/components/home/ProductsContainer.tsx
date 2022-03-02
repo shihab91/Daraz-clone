@@ -2,14 +2,14 @@ import React from "react";
 import { ProductsContainerStyles } from "styles/ProductsContainer.styles";
 import ProductCard from "../common/ProductCard";
 
-const ProudctsContainer = () => {
+const ProductsContainer = ({ products }: { products: any[] }) => {
   return (
     <ProductsContainerStyles>
-      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => {
-        return <ProductCard />;
+      {products.map((product) => {
+        return <ProductCard product={product} />;
       })}
     </ProductsContainerStyles>
   );
 };
 
-export default ProudctsContainer;
+export default ProductsContainer;

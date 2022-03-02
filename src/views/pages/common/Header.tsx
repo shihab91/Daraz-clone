@@ -21,7 +21,12 @@ export function Header() {
             <Logo src={logo} alt=""></Logo>
           </div>
           <InputWrapper>
-            <Input type="text" />
+            <Input
+              transition={{ type: "spring", stiffness: 300 }}
+              whileFocus={{ width: "50%" }}
+              type="text"
+              placeholder="enter search text"
+            />
             <SearchButton>
               <AiOutlineSearch />
             </SearchButton>

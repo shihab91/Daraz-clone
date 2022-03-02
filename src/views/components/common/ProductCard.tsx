@@ -4,7 +4,7 @@ import {
   ProductImageWrapper,
 } from "styles/ProductCard.styles";
 
-const ProductCard = () => {
+const ProductCard = ({ product }: { product: any }) => {
   return (
     <ProductCardWrapper>
       <ProductImageWrapper>

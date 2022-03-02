@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 export const HeaderComponent = styled.div`
   background: #e2e2e2;
@@ -23,12 +24,16 @@ export const InputWrapper = styled.div`
   width: 100%;
   height: 40px;
 `;
-export const Input = styled.input`
+export const Input = styled(motion.input)`
   width: 400px;
   height: 100%;
   border-radius: 4px;
   padding: 0 10px 0 10px;
   font-size: 16px;
+  font-family: var(--font-montserrat);
+  /* &::placeholder {
+    font-family: var(--font-montserrat);
+  } */
 `;
 export const SearchButton = styled.button`
   background: var(--color-orange);

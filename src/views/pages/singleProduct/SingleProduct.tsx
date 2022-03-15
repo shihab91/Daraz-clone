@@ -2,7 +2,7 @@ import useAPI from "hooks/useAPI";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { add_to_cart } from "redux/actions/cartAction";
+import { add_to_cart, remove_from_cart } from "redux/actions/cartAction";
 import ProductService from "services/Product.service";
 import { Button } from "styles/ProductCard.styles";
 import { SingleProductImageWrapper } from "styles/singleProduct.styles";
@@ -20,7 +20,9 @@ const SingleProduct = () => {
       <Button onClick={() => dispatch(add_to_cart(product as IProduct))}>
         Add to Cart
       </Button>
-      <Button>Remove from cart</Button>
+      <Button onClick={() => dispatch(remove_from_cart(id))}>
+        Remove from cart
+      </Button>
     </div>
   );
 };

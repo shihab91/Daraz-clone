@@ -1,8 +1,9 @@
 // import logo from "assets/images/logo.png";
+import logo from "assets/images/logo.png";
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-import logo from "../../../assets/images/logo.png";
-import { Container } from "../../../styles/GlobalStyles";
+import { useNavigate } from "react-router-dom";
+import { Container } from "styles/GlobalStyles";
 import {
   HeaderComponent,
   HeaderWrapper,
@@ -10,15 +11,22 @@ import {
   InputWrapper,
   Logo,
   SearchButton,
-} from "../../../styles/Header.styles";
+} from "styles/Header.styles";
 
-export function Header() {
+const Header = () => {
+  const navigate = useNavigate();
   return (
     <HeaderComponent>
       <Container>
         <HeaderWrapper>
           <div>
-            <Logo src={logo} alt=""></Logo>
+            <Logo
+              onClick={() => {
+                navigate("/");
+              }}
+              src={logo}
+              alt=""
+            ></Logo>
           </div>
           <InputWrapper>
             <Input
@@ -35,4 +43,5 @@ export function Header() {
       </Container>
     </HeaderComponent>
   );
-}
+};
+export default Header;

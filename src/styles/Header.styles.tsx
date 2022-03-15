@@ -16,6 +16,7 @@ export const HeaderWrapper = styled.div`
 export const Logo = styled.img`
   width: 150px;
   margin-right: 50px;
+  cursor: pointer;
 `;
 
 export const InputWrapper = styled.div`
@@ -31,9 +32,6 @@ export const Input = styled(motion.input)`
   padding: 0 10px 0 10px;
   font-size: 16px;
   font-family: var(--font-montserrat);
-  /* &::placeholder {
-    font-family: var(--font-montserrat);
-  } */
 `;
 export const SearchButton = styled.button`
   background: var(--color-orange);
